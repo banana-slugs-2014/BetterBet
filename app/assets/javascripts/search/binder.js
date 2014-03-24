@@ -22,8 +22,8 @@ Search.Binder.prototype = {
   bindClick: function(){
     var controller = this.controller
     $('body').on("click", ".ui-menu-item a", function(e){
-      var id = $(this).data("id")
-      controller.searchTerm(id);
+      var $id = $(this).data("id")
+      controller.searchTerm($id);
     })
   }
 }

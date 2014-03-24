@@ -16,8 +16,8 @@ Friends.Binder.prototype = {
     var controller = this.controller
     $(this.selectors.addFriend).on('click', function(e){
       e.preventDefault();
-      var friendId = $(this).data('id')
-      controller.addFriend(friendId);
+      var $friendId = $(this).data('id')
+      controller.addFriend($friendId);
     })
   },
 
@@ -25,9 +25,9 @@ Friends.Binder.prototype = {
     var controller = this.controller
     $(this.selectors.deleteFriend).on('click', function(e){
       e.preventDefault();
-      var friendId = $(this).data('friend')
-      var userId = $(this).data('user')
-      controller.deleteFriend(friendId, userId);
+      var $friendId = $(this).data('friend')
+      var $userId = $(this).data('user')
+      controller.deleteFriend($friendId, $userId);
     })
   }
 

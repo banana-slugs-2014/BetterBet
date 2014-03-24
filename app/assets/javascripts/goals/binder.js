@@ -14,9 +14,9 @@ Goals.Binder.prototype = {
     var controller = this.controller;
     $(this.selectors.deleteGoal).on('click', function(e){
       e.preventDefault();
-      var goalId = $(this).data('goal');
+      var $goalId = $(this).data('goal');
       if (confirm("Are you sure?")){
-        controller.deleteGoal(goalId);
+        controller.deleteGoal($goalId);
       }
     });
   }

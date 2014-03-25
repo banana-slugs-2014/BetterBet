@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def autocomplete
-    render :json => User.search(params[:name])
+    render :json => User.search(params[:username])
   end
 
   def show
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    user = User.find_by_name(params[:user])
+    user = User.find_by_username(params[:user])
     render :json => user
   end
 

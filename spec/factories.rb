@@ -5,7 +5,7 @@ FactoryGirl.define do
 
   factory :user do
     email
-    name Faker::Lorem.word
+    username Faker::Lorem.word
     password '1234'
     password_confirmation '1234'
     bio Faker::Lorem.paragraph

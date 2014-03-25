@@ -9,7 +9,7 @@ describe "User", js: true do
     describe "can create an account" do
       it "by visiting the new user page" do
         visit new_user_path
-        fill_in 'Name', with: new_user.name
+        fill_in 'Username', with: new_user.username
         fill_in 'Email', with: 'me@example.com'
         fill_in 'Password', with: '123'
         fill_in 'Password confirmation', with: '123'
@@ -53,16 +53,16 @@ describe "User", js: true do
     describe "can edit their own account" do
       it "by visiting their own user edit page" do
         visit edit_user_path user
-        fill_in 'Name', with: 'New Name'
+        fill_in 'Username', with: 'New username'
         click_button 'Submit'
-        expect(page).to have_content 'New Name'
+        expect(page).to have_content 'New username'
       end
     end
 
     describe "can view a user's profile" do
       it "by viewing the user show page" do
         visit user_path friend
-        expect(page).to have_content friend.name
+        expect(page).to have_content friend.username
       end
     end
   end

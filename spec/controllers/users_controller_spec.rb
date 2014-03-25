@@ -93,8 +93,8 @@ describe UsersController do
       context 'invalid attributes' do
         it "shouldn't update a user's information" do
           expect {
-              put :update, id: user, user: { name: "" }
-            }.to_not change{ user.reload.name }.to ""
+              put :update, id: user, user: { username: "" }
+            }.to_not change{ user.reload.username }.to ""
         end
       end
     end

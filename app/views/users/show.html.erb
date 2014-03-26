@@ -21,7 +21,10 @@
   </header>
 
   <div class="friend_status"></div>
-  <img class="user_profile_img" src="<%= @image_url %>" >
+
+  <div class="user_profile_img_container">
+    <img class="user_profile_img" src="<%= @image_url %>" >
+  </div>
 
   <p class="user_profile_bio">
       <%= @user.bio %></label>

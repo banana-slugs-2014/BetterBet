@@ -1,7 +1,9 @@
 <div class="new-session-form">
   <div class="login_form">
     <h3>Log in and be awesome</h3>
-    <%= render 'shared/errors', object: @user %>
+    <% if @errors %>
+        <%= render 'shared/errors', object: @user %>
+    <% end %>
     <%= render 'loginform' %>
     <%= link_to "Sign up", new_user_path, class: "session-form_signup" %>
   </div>
